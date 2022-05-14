@@ -1,0 +1,667 @@
+//SCSS Barbosa Web
+
+//Colores base
+$color-negro:#000000;
+$color-gris3:#333333;
+$color-gris5:#555555;
+$color-gris6:#666666;
+$color-gris9:#999999;
+$color-grisC:#CCCCCC;
+$color-grisDE:#DEDEDE;
+$color-grisEF:#EFEFEF;
+$color-grisF4:#F4F4F4;
+$color-blanco:#FFFFFF;
+$color-azul7: #0099FF;
+$color-azul1:#CED7DC;
+$color-azul2:#1464A5;
+$color-azul3:#063665;
+$color-azul4:#03294D;
+$color-azul5:#E9F4FC;
+$color-azul6:#3798ec;
+
+
+
+$color-separador:#3798EC;
+
+$color-back:#F6F6F6;
+$color-morena:#9D2449;
+$color-morena-2:#7F0C2F;
+$color-naranja:#ff4E00;
+
+
+/******************************
+* GENERALES
+******************************/
+
+.t-morena{
+    color: $color-morena;
+}
+
+.t-azul{
+    color: $color-azul7;
+}
+
+.bg-morena{
+    background: $color-morena;
+}
+
+.bg-naranja{
+    background: $color-naranja;
+}
+
+.bg-back{
+    background: $color-grisEF;
+}
+
+.bg-progress{
+    background: #B1B1B1;
+}
+
+
+/*-----BOTONES-----*/
+
+//---Botones--//
+
+.btn-intra1{
+	background-color:$color-azul2;
+	color:$color-blanco;
+
+	&:hover, &:focus, &:active{
+		background-color:$color-azul3;
+		color:$color-blanco;
+	}
+}
+
+.btn-intra2{
+	background-color:$color-azul3;
+	color:$color-blanco;
+
+	&:hover, &:focus, &:active{
+		background-color:$color-azul4;
+		color:$color-blanco;
+	}
+}
+
+.btn-intra3{
+	background-color:$color-blanco;
+	color:$color-azul3;
+	border:1px solid $color-azul3;
+
+	&:hover, &:focus, &:active{
+		background-color:$color-grisDE;
+		color:$color-azul3;
+	}
+}
+
+
+
+//Figuras
+.triangle-r{
+	display:inline-block;
+    width: 0; 
+    height: 0;
+    border-left: 10px solid;
+    border-top: 8px solid transparent;
+	border-bottom: 8px solid transparent;
+	
+	&.azul{
+		border-left-color:$color-azul7;
+	}
+
+	&.rmor{
+		border-left-color:$color-morena;
+	}
+
+	&.blanco{
+		border-left-color:$color-blanco;
+	}
+}
+
+
+//Botones
+a,.btn{
+    transition: all 0.4s ease;
+}
+
+
+.btn-web1{
+    background-color: $color-blanco;
+    border-color: $color-morena;
+    color:$color-morena;
+
+    &:hover, &:active, &:focus{
+        background-color: $color-morena;
+        border-color: $color-morena;
+        color:$color-blanco;
+    }
+}
+
+.btn-buscador{
+    background-color: $color-morena;
+    color:$color-blanco;
+
+    &:hover, &:active, &:focus{
+        background-color: $color-morena-2;
+        color:$color-blanco;
+    }
+}
+
+//Nav
+
+.navbar-custom{
+    background:$color-blanco;
+    padding-top:0;
+    padding-bottom:0;
+    transition: all 0.8s ease;
+    height: 56px;
+    box-shadow: 0 0 8px $color-grisC;
+    z-index:1;
+
+    .navbar-brand{
+		height: 56px;
+		background: $color-morena;
+		position: relative;
+
+		&:after{
+			content: '';
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 10px 0 10px 17.3px;
+			border-color: transparent transparent transparent $color-morena;
+			position: absolute;
+			right: -17px;
+			top: 28%;
+		}
+
+        img{
+            height: 100%;
+        }
+    }
+    
+    .navbar-collapse{
+
+        .navbar-nav{
+
+            .nav-item{
+
+                .nav-link{
+                    //color:#ff8033;
+                    color:$color-negro;
+                    padding-left: 1rem;
+                    padding-right: 1rem;
+    
+                    
+
+                &:hover, &:active, &:focus{
+                    color:$color-morena;
+    
+                }
+            }
+        }
+    }
+
+    &.scroll-style{
+        background-color: $color-blanco;
+        box-shadow: 0 0 8px $color-grisC;
+    }
+}
+}
+
+/*------SIDEBAR--------*/
+
+.sidebar,.content{
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: calc(100vh - 72px);   
+    position: relative;
+}
+
+.box-col{
+    padding:4px 10px;
+
+    .bc-title{
+        font-weight: bold;
+        font-size: 16px;
+
+        &.center{
+            text-align: center;
+        }
+    }
+
+    .bc-title-2{
+        font-weight: bold;
+        font-size: 13px;
+        margin-bottom:5px;
+    }
+
+    &.l-bot{
+        border-bottom:1px solid #DEDEDE;
+    }
+
+    &.l-top{
+        border-top:1px solid #DEDEDE;
+    }
+
+    table{
+        margin:0;
+
+        tbody{
+
+            tr{
+                border-bottom:8px solid $color-blanco;
+
+                td{
+                    border-top:0;
+                    padding: 4px 8px;
+
+                    &.no-format{
+                        padding:0;
+                    }
+                }
+
+                & > td:first-child{
+                    border-right: 1px solid $color-gris3;
+                }
+
+                & > td.select{
+                    border-right: 3px solid $color-morena;
+                }
+            }
+        }
+
+        &.table-1{
+
+            tbody{
+
+                tr{
+
+                    td{
+                        font-size:18px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*------LOGIN------//*/
+
+.cont-form {
+    background-color: $color-blanco;
+    margin-top: 2rem;
+    position: relative;
+    padding: 4rem 4rem 2rem;
+
+    .h3{
+        border-bottom:1px solid $color-morena;
+    }
+
+    .caja-logo {
+        position: absolute;
+        top: -64px;
+        left: 0;
+        right: 0;
+
+        &>div {
+            width: 200px;
+            height: 200px;
+            background-color: $color-blanco;
+            -webkit-border-radius: 90%;
+            border-radius: 90%;
+            margin: 0 auto;
+
+            .logo-inicio {
+                width: 10rem;
+            }
+        }
+    }
+
+    .form-login {
+
+        .form-group {
+            position: relative;
+
+            svg {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                color: $color-gris9;
+            }
+
+            input {
+
+                &::-webkit-input-placeholder {
+                    opacity: 1;
+                    color: $color-gris9;
+                }
+
+                &::-moz-placeholder {
+                    opacity: 1;
+                    color: $color-gris9;
+                }
+
+                &:-ms-input-placeholder {
+                    opacity: 1;
+                    color: $color-gris9;
+                }
+
+                &::-ms-input-placeholder {
+                    opacity: 1;
+                    color: $color-gris9;
+                }
+
+                &::placeholder {
+                    opacity: 1;
+                    color: $color-gris9;
+                }
+            }
+        }
+
+        /*button{
+            border-radius:10%;
+        }*/
+        p {
+            color: $color-gris6;
+            margin: 0;
+            font-size: 0.9rem;
+        }
+        a {
+            font-size: 0.8rem;
+        }
+    }
+}
+
+/*----PANEL DISTRITOS-----*/
+
+
+//----------------Distritos Secciones Municipios----------------//
+
+.table-panel{
+	margin:0;
+	border:0;
+
+	thead{
+		tr{
+			th{
+				color:$color-azul2;
+				font-weight:normal;
+				font-size:1.2em;
+				border-width:1px;
+				width:50%;
+			}
+		}
+	}
+	tbody{
+
+		tr{
+			& > td:first-child{
+				color:$color-azul2;
+			}
+		}
+
+		& > tr:last-child{
+			td{
+				border-bottom:0;
+			}
+		}
+	}
+
+}
+.text-fecha-reporte{
+	width:100%;
+	color:$color-azul2;
+	margin-bottom:2em;
+
+	span{
+		padding:0 0.5em;
+	}
+}
+
+
+.fila-intra{
+
+	& > div{
+		float:left;
+		padding:0.5em 0;
+
+		p{
+			margin:0;
+		}
+	}
+
+	.celda-1{
+		width:26%;
+		text-align:right;
+	}
+	.celda-2{
+		width:40%;
+		text-align:center;
+	}
+	.celda-3, .celda-4{
+		width:11%;
+		border-right:1px solid $color-grisC;
+		padding-left:0.8em;
+	}
+
+	.celda-5{
+		width:10%;
+		padding-left:0.8em;
+    }
+    .celda-form{
+        width: 40%;
+    }
+}
+
+.fila-intra-2{
+
+	& > div{
+		float:left;
+		padding:0.5em 0;
+
+		p{
+			margin:0;
+		}
+	}
+
+	.celda-1{
+		width:8%;
+        text-align:right;
+        span{
+            font-size:1.2em;
+            color:$color-naranja;
+            font-weight: light;
+        }
+	}
+	.celda-2{
+		width:60%;
+		text-align:center;
+	}
+	.celda-3, .celda-4{
+		width:11%;
+		border-right:1px solid $color-grisC;
+		padding-left:0.8em;
+	}
+
+	.celda-5{
+		width:10%;
+		padding-left:0.8em;
+    }
+}
+
+
+.panel-intra3{
+	margin:0 0 2em;
+
+	& > div{
+		border-color:$color-grisC;
+		border-style:solid;
+	}
+
+	.panel-header-1{
+		background-color:$color-morena;
+		padding:0.5em;
+		color:$color-blanco;
+		font-size:1.5em;
+		border-width:1px 1px 0;
+	}
+
+	.panel-header-2{
+		border-width:0 1px 1px;
+
+		.fila-intra,.fila-intra-2{
+
+			& > div{
+				border:0!important;
+				color:$color-azul2;
+				font-weight:bold;
+				text-transform:uppercase;
+				height:54px;
+				line-height:42px;
+			}
+
+			.celda-5{
+				line-height:20px;
+			}
+
+		}
+	}
+
+	.panel-body{
+		border-width:0 1px 1px;
+		padding:1em 0;
+		overflow-y:auto;
+		max-height:38em;
+
+		.fila-intra{
+
+			.celda-1{
+				padding:0.3em 0 0;
+
+				p{
+					font-size:1.2em;
+
+					span{
+						color:$color-naranja;
+						padding-left:0.5em;
+					}
+				}
+
+			}
+			.celda-2{
+				padding:0.4em  0.8em 0px;
+			}
+
+			.celda-5{
+				color:$color-naranja;
+			}
+		}
+	}
+
+	.panel-total{
+		border-width:0;
+
+		.fila-intra{
+
+			& > div{
+				border:0;
+				font-weight:bold;
+				font-size:1.2em;
+			}
+
+			.celda-1{
+				color:$color-naranja;
+			}
+
+			.celda-2{
+				padding:0.3em 0.8em;
+			}
+
+		}
+	}
+
+	&.panel-seccion{
+
+		.fila-intra{
+
+			.celda-1{
+				width:24%;
+
+				span{
+					font-size:1.2em;
+                    color:$color-naranja;
+                    font-weight: light;
+				}
+			}
+			.celda-2{
+				width:34%;
+			}
+			.celda-3, .celda-4{
+				width:16%;
+			}
+		}
+	}
+
+	&.panel-promotor{
+
+		.panel-body{
+			max-height:30em;
+		}
+	}
+}
+
+.caja-candidato{
+	padding:0 0 0 10.5em;
+	height:10em;
+	margin:0 0 2em;
+
+	.candidato-img{
+		background-image:url('..');
+		background-color:$color-grisDE;
+		background-repeat:no-repeat;
+		background-position:center center;
+		background-size:cover;;
+		width:10em;
+		height:10em;
+		position:absolute;
+		top:0;
+		left:15px;
+		border:1px solid $color-grisDE;
+	}
+
+	.text-candidato{
+		color:$color-azul2;
+		font-size:2em;
+		margin:0;
+	}
+
+	.list-candidato{
+		color:$color-naranja;
+		font-size:1.2em;
+
+		.separador{
+			padding:0 0.5em;
+		}
+	}
+}
+
+.botones-exp{
+	margin:0 0 1em;
+	button{
+		width:8em;
+	}
+}
+
+.text-meta{
+	text-transform:uppercase;
+    color:$color-azul2;
+    ;
+	margin:0 0 1em;
+	text-align:center;
+
+	span{
+		color:$color-naranja;
+	}
+}
+//Hoja 2
+@import "layout-parte-2.scss";
