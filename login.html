@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/layout-estrategia.css" />
 
+    <!--JS-->
+    <script src="js/main.js"></script>
     <!--Font-->
     <link href="https://fonts.googleapis.com/css?family=Bitter|Roboto:200,400" rel="stylesheet" />
 
@@ -47,27 +49,27 @@
         <div class="row pt-5">
             <div class="col-12 col-md-3"></div>
             <div class=" col-12 col-md-6">
-                
+
                 <div class="cont-form rounded shadow">
                     <div class="caja-logo text-center">
                         <div>
-                            <img class="logo-inicio mt-3" src="img/puebla-2019.svg"/>
+                            <a href="index.html"><img class="logo-inicio mt-3" src="img/puebla-2019.svg" /></a>
                         </div>
                     </div>
                     <h3 class="h3 t-morena mt-5 pt-4 pb-3 text-center"><b>SISTEMA</b> DE CAPTURA</h3>
                     <form class="form-login mt-5">
-                    <label for="usuario"><span class="h5">Iniciar Sesión</span></label>
+                        <label for="usuario"><span class="h5">Iniciar Sesión</span></label>
 
-                        <div class="form-group">                            
-                            <input id="usuario" type="text" class="form-control p-4" placeholder="Usuario"/>
+                        <div class="form-group">
+                            <input id="usuario" type="text" class="form-control p-4" placeholder="Usuario" />
                         </div>
                         <div class="form-group">
-                            
-                            <input id="contraseña" type="password" class="form-control p-4" placeholder="Contraseña"/>
+
+                            <input id="contraseña" type="password" class="form-control p-4" placeholder="Contraseña" />
                         </div>
                         <div class="mt-4 mb-4">
-                            <button class="btn btn-buscador btn-block p-2">Iniciar Sesión</button>
-                        </div>                                              
+                            <button class="btn btn-buscador btn-block p-2" type=button onClick="location.href='index.html'">Iniciar Sesión</button>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -79,7 +81,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
-    <script src="js/layout-estrategia.js"></script>
 </body>
 
 </html>
